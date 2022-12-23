@@ -1,0 +1,41 @@
+#ifndef __STATUS_H__
+#define __STATUS_H__
+
+typedef enum {
+	OK = 0,
+	RUN,
+	PAUSE,
+	SORTED,
+	STOP,
+	UPDATE,
+	ERROR_MEMORY_ALLOC,
+	ERROR_TTF_OPENING_FONT,
+	ERROR_SDL_FONT_INIT,
+	ERROR_SDL_INIT,
+	ERROR_NULL_POINTER,
+	ERROR_DRW,
+	START,
+	RESTART,
+	WELCOME,
+	STATUS_MAX
+} status_t;
+
+static char* const status_string[STATUS_MAX] = {
+	"OK",
+	"RUN",
+	"PAUSE",
+	"SORTED",
+	"STOP",
+	"UPDATE",
+	"ERROR_MEMORY_ALLOC",
+	"ERROR_TTF_OPENING_FONT",
+	"ERROR_SDL_FONT_INIT",
+	"ERROR_SDL_INIT",
+	"ERROR_NULL_POINTER",
+	"ERROR_DRW",
+	"START",
+	"RESTART",
+	"WELCOME"
+};
+
+#endif
