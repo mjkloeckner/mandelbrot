@@ -18,9 +18,6 @@ status_t SDL_setup(SDL_Window **win, SDL_Renderer **rend) {
 	if ((*win == NULL) || (*rend == NULL))
 		return ERROR_NULL_POINTER;
 
-	if(TTF_Init() == -1)
-		return ERROR_SDL_FONT_INIT;
-
 	return OK;
 }
 
@@ -28,7 +25,6 @@ status_t SDL_cleanup(SDL_Window *win, SDL_Renderer *rend) {
 	if((win == NULL) || (rend == NULL))
 		return ERROR_NULL_POINTER;
 
-	TTF_Quit();
 	SDL_DestroyRenderer(rend);
     SDL_DestroyWindow(win);
 	SDL_Quit();
