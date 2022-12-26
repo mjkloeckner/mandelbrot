@@ -24,7 +24,7 @@ float map(float x, float in_min, float in_max, float out_min, float out_max) {
 	return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
-size_t get_iterations(float complex z0) {
+size_t get_iterations(const float complex z0) {
 	size_t it;
 	float complex z = 0.0 + 0.0 * I;
 
